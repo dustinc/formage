@@ -27,6 +27,11 @@
       "name": "Alon Valadji",
       "email": "alon@empeeric.com",
       "url": "http://www.empeeric.com/"
+    },
+    {
+      "name": "Dustin Coffey",
+      "email": "coffey.dustin@gmail.com",
+      "url": "https://github.com/dustinc/"
     }
   ],
   "dependencies": {
