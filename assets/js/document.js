@@ -293,6 +293,16 @@ function initActions() {
 
         var msg = 'Are you sure you want to ' + $(this).text().toLowerCase() + ' this document? Changes made will not be saved!';
 
+        var redirect = $(this).attr('data-redirect');
+
+        var redirect_append = $(this).attr('data-redirect-append');
+
+        var href = redirect || window.location.href.split('/document/')[0];
+
+        if(redirect_append) {
+          href = window.location.href + redirect_append;
+        }
+
         window.bootbox.confirm(msg, function (result) {
             if (!result) return;
 
@@ -310,7 +320,7 @@ function initActions() {
                     if (window.isDialog) {
                         window.dialogCallback({});
                     } else {
-                        window.location.href = window.location.href.split('/document/')[0];
+                        window.location.href = href;
                     }
                 }
             });
